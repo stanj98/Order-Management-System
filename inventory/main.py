@@ -14,9 +14,9 @@ app.add_middleware(
 
 # Fetch and cast environment variables properly
 redis = get_redis_connection(
-    host=os.getenv("REDIS_URL", "localhost"),
-    port=os.getenv("REDIS_PORT"),
-    password=os.getenv("REDIS_PASSWORD", None),
+    host=os.getenv("INVENTORY_REDIS_URL", "localhost"),
+    port=os.getenv("INVENTORY_REDIS_PORT"),
+    password=os.getenv("INVENTORY_REDIS_PASSWORD", None),
     decode_responses=True
 )
 
